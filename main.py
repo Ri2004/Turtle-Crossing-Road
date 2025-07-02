@@ -20,9 +20,17 @@ while game_is_on:
     time.sleep(0.1)
     screen.update()
 
-    carTurtle.create_cars()
+    carTurtle.create_car()
     carTurtle.move_cars()
+
+    # Detect when player turtle collide with any car
+    for car in carTurtle.all_cars:
+        if turtle_player.distance(car) < 20:
+            game_is_on = False
 
     if turtle_player.ycor() >= 280:
         scoreboard.update_scoreboard()
         turtle_player.starting_position()
+
+
+screen.exitonclick()

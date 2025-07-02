@@ -10,7 +10,7 @@ class CarManager:
     def __init__(self):
         self.all_cars = []
 
-    def create_cars(self):
+    def create_car(self):
         random_chance = random.randint(1, 6)
         if random_chance == 1:
             new_car = Turtle("square")
