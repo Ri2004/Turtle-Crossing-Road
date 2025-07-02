@@ -28,9 +28,11 @@ while game_is_on:
         if turtle_player.distance(car) < 20:
             game_is_on = False
 
-    if turtle_player.ycor() >= 280:
+    # Detect successful crossing
+    if turtle_player.is_at_finish_line():
         scoreboard.update_scoreboard()
-        turtle_player.starting_position()
+        turtle_player.go_to_start()
+        carTurtle.level_up()
 
 
 screen.exitonclick()
