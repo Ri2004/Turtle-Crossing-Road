@@ -27,6 +27,7 @@ while game_is_on:
     for car in carTurtle.all_cars:
         if turtle_player.distance(car) < 20:
             game_is_on = False
+            scoreboard.game_over()
 
     # Detect successful crossing
     if turtle_player.is_at_finish_line():
