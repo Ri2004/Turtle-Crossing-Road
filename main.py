@@ -32,7 +32,7 @@ while game_is_on:
     if turtle_player.is_at_finish_line():
         scoreboard.update_scoreboard()
         turtle_player.go_to_start()
-        carTurtle.level_up()
+        carTurtle.increase_car_speed()
 
 
 screen.exitonclick()
