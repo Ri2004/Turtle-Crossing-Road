@@ -19,3 +19,10 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+
+    carTurtle.create_cars()
+    carTurtle.move_cars()
+
+    if turtle_player.ycor() >= 280:
+        scoreboard.update_scoreboard()
+        turtle_player.starting_position()
